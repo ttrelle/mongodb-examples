@@ -6,4 +6,4 @@ db.mail.insert( {subject: "Robot leader to minions", body: "Humans suck", prio: 
 db.mail.insert( {subject: "Human leader to minions", body: "Robots suck", prio: 1 } )
 
 // search
-db.mail.runCommand("text", {search: "robot", projection: {_id:0, prio:0} } )
+db.mail.runCommand("text", {search: "robot", filter: {prio:0} } )

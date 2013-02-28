@@ -1,3 +1,8 @@
+// enable text search
+use admin
+db.runCommand( {setParameter:1, textSearchEnabled: true} )
+use txt
+
 // create text index
 db.txt.drop()
 db.txt.ensureIndex( {txt: "text"} )
